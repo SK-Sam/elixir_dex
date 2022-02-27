@@ -6,6 +6,7 @@ defmodule ElixirDex.MixProject do
       app: :elixir_dex,
       version: "0.1.0",
       elixir: "~> 1.7",
+      escript: escript_config(),
       elixirc_paths: elixirc_paths(Mix.env()),
       compilers: [:phoenix, :gettext] ++ Mix.compilers(),
       start_permanent: Mix.env() == :prod,
@@ -22,6 +23,10 @@ defmodule ElixirDex.MixProject do
       mod: {ElixirDex.Application, []},
       extra_applications: [:logger, :runtime_tools]
     ]
+  end
+
+  defp escript_config do
+    [main_module: ElixirDex.Terminal]
   end
 
   # Specifies which paths to compile per environment.
