@@ -16,6 +16,15 @@ defmodule ElixirDex.Pokedex.DataCleanerTest do
   end
 
   describe "clean_data/1" do
-    test "Fn returns downcased string with no "
+    test "Fn returns downcased string with no whitespace" do
+      original_input = "D iTtoe"
+      expected_output = "dittoe"
+
+      assert DataCleaner.clean_data(original_input) == expected_output
+
+      good_input = "dittoo"
+
+      assert DataCleaner.clean_data(good_input) == good_input
+    end
   end
 end
