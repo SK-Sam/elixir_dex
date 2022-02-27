@@ -9,7 +9,7 @@ defmodule ElixirDex.Pokedex.DataCleaner do
   @doc """
   Removes whitespace and downcases entire string
   """
-  @spec clean_data(String.t) :: String.t | tuple()
+  @spec clean_data(String.t()) :: String.t() | tuple()
   def clean_data(input) do
     input
     |> String.downcase()
@@ -21,7 +21,7 @@ defmodule ElixirDex.Pokedex.DataCleaner do
   Fn should expect a String arg, and will return a tuple error to raise awareness
   to Trainer in case of this odd situation.
   """
-  @spec remove_whitespace(String.t) :: String.t | tuple()
+  @spec remove_whitespace(String.t()) :: String.t() | tuple()
   def remove_whitespace(input) when is_bitstring(input) do
     String.replace(input, " ", "")
   end

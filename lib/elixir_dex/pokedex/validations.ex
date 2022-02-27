@@ -9,7 +9,7 @@ defmodule ElixirDex.Pokedex.Validations do
   @doc """
   Either signal to Pokedex that the input is valid, or pass an error tuple
   """
-  @spec maybe_add_errors(any) :: {:error, :empty_string | :incorrect_format} | {:ok, String.t}
+  @spec maybe_add_errors(any) :: {:error, :empty_string | :incorrect_format} | {:ok, String.t()}
   def maybe_add_errors(input) when is_bitstring(input) do
     case String.length(input) do
       0 -> {:error, :empty_string}

@@ -10,14 +10,14 @@ defmodule ElixirDex.Pokedex.DataFetcherTest do
       %{method: :get, url: "https://pokeapi.co/api/v2/pokemon/ditto"} ->
         %Tesla.Env{status: 200, body: %{"name" => "dittoe", "id" => "1"}}
 
-        %{method: :get, url: "https://pokeapi.co/api/v2/pokemon/1"} ->
-          %Tesla.Env{status: 200, body: %{"name" => "dittoe", "id" => "1"}}
+      %{method: :get, url: "https://pokeapi.co/api/v2/pokemon/1"} ->
+        %Tesla.Env{status: 200, body: %{"name" => "dittoe", "id" => "1"}}
 
-        %{method: :get, url: "https://pokeapi.co/api/v2/pokemon/dottoe"} ->
-          %Tesla.Env{status: 404}
+      %{method: :get, url: "https://pokeapi.co/api/v2/pokemon/dottoe"} ->
+        %Tesla.Env{status: 404}
 
-        %{method: :get, url: "https://pokeapi.co/api/v2/pokemon/10000"} ->
-          %Tesla.Env{status: 404}
+      %{method: :get, url: "https://pokeapi.co/api/v2/pokemon/10000"} ->
+        %Tesla.Env{status: 404}
     end)
 
     :ok
