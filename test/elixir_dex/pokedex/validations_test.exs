@@ -15,7 +15,7 @@ defmodule ElixirDex.Pokedex.ValidationsTest do
     test "return original string when input is a String unless empty string" do
       pkmn_name = "ditto"
 
-      assert Validations.maybe_add_errors(pkmn_name) == pkmn_name
+      assert Validations.maybe_add_errors(pkmn_name) == {:ok, pkmn_name}
       assert Validations.maybe_add_errors("") == {:error, :empty_string}
     end
   end
