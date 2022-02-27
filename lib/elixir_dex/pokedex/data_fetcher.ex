@@ -63,7 +63,8 @@ defmodule ElixirDex.Pokedex.DataFetcher do
   @spec client :: Tesla.Client.t()
   def client do
     [
-      {Tesla.Middleware.BaseUrl, "https://pokeapi.co/api/v2"}
+      {Tesla.Middleware.BaseUrl, "https://pokeapi.co/api/v2"},
+      Tesla.Middleware.JSON
     ]
     |> Tesla.client()
   end
