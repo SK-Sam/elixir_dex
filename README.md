@@ -58,5 +58,5 @@ To use the CLI Pokedex Interaction,
 
 ### Windows Instructions:
 - Follow every step above until you have a geenrated `elixir_dex` script in your project directory
-- Instead of running `./elixir_dex {POKEMON ID OR NAME}`, remove the `.`.
-  - Ex: `elixir_dex {POKEMON ID OR NAME}`
+- Instead of running `./elixir_dex {POKEMON ID OR NAME}`, we will use the cmd `escript elixir_dex {POKEMON ID OR NAME}`
+  - Ex: `escript elixir_dex ditto`
